@@ -6,15 +6,15 @@
           <ul class="contact-list">
             <li class="p-name">
               {%- if site.author -%}
-                <a class="black-link" href="{{ site.url }}/about.html">
+                {%- if site.moving.about_url -%}
+                  <a class="black-link" href="{{ site.moving.about_url }}">
                   {{ site.author | escape }} 
-                </a>
+                  </a>
+                {%- else %}
+                  {{ site.author | escape }}
+                {%- endif %}
               {%- endif -%}
               </li>
-              {%- if site.email -%}
-              <li>
-              <a class="u-email black-link" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-              {%- endif -%}
           </ul>
         </div>
       </div>
