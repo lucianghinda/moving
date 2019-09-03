@@ -171,7 +171,12 @@
 .post-list {
   margin-top: 2.5rem;
   margin-left: 0;
-  list-style: none;
+  list-style-type: none;
+
+  ul {
+    list-style-type: none;
+    margin-left: 0px;
+  }
 
   li {
     margin-bottom: $spacing-unit / 12;
@@ -181,14 +186,14 @@
 .post-year {
   margin-top: 2rem;
   margin-bottom: 0.25rem;
-  font-weight: 700;
+  font-weight: normal;
   color: lighten($text-color, 15%);
 
   @media (max-width: 500px) {
-    @include relative-font-size(1.2);
+    @include relative-font-size(0.5);
   }
 
-  @include relative-font-size(1.5);
+  @include relative-font-size(0.7);
 }
 
 .post-meta {
@@ -196,15 +201,15 @@
   min-width: 60px;
 
   @media (max-width: 500px) {
-    @include relative-font-size(0.8);
+    @include relative-font-size(0.5);
   }
 
-  @include relative-font-size(1);
-  color: lighten($text-color, 25%);
+  @include relative-font-size(0.7);
+  color: lighten($text-color, 70%);
 }
 
 .post-link-layout {
-  margin-left: 10%;
+  margin-left: 2%;
   display: inline;
 
   @media (max-width: 500px) {
